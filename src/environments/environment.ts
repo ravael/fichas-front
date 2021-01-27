@@ -5,6 +5,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8080/api',
-  authUrl: 'http://localhost:8080/authenticate'
+  // apiUrl: 'http://localhost:8080/api',
+  // authUrl: 'http://localhost:8080/authenticate'
+
+  apiUrl: 'https://fichas-api.herokuapp.com/api',
+  authUrl: 'https://fichas-api.herokuapp.com/authenticate'
 };
