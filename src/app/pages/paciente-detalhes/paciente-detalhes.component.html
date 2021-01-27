@@ -1,0 +1,114 @@
+<div>
+  <div class="col-md-4 float-left full-height">
+    <div class="card card-user">
+      <div class="image">
+        <img src="assets/img/damir-bosnjak.jpg" alt="...">
+      </div>
+      <div class="card-body">
+        <div class="author">
+          <a href="#">
+            <img class="avatar border-gray" src="assets/img/default-avatar.png" alt="...">
+            <h5 class="title">Usuário da Silva Santos</h5>
+          </a>
+          <p class="description">
+            email@email.com.br
+          </p>
+        </div>
+        <p class="description text-center">
+          (99) 99999-9999
+        </p>
+      </div>
+      <div class="card-footer">
+        <hr>
+        <div class="button-container">
+          <div class="row">
+            <!-- <div class="col-lg-3 col-md-6 col-6 ml-auto">
+              <h5>12
+                <br>
+                <small>Files</small>
+              </h5>
+            </div> -->
+            <div class="col-lg-6 col-md-6 col-6 ml-auto mr-auto">
+              <h5>Arquiteto
+                <!-- <br>
+                <small>Used</small> -->
+              </h5>
+            </div>
+            <div class="col-lg-6 mr-auto">
+              <h5>Ateu
+                <!-- <br>
+                <small>Spent</small> -->
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div
+      class="search-results"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollUpDistance]="1.5"
+      [infiniteScrollThrottle]="2"
+      (scrolled)="onScrollDown()"
+      (scrolledUp)="onScrollUp()"
+    >
+
+    <div class="row">
+      <div class="stats col-8 col-md-8">
+        <h3 class="card-title ml-3 mb-5">Lista de Consultas</h3>
+      </div>
+      <div class="stats col-4 col-md-4 text-right pr-4">
+        <button type="submit" class="btn btn-success btn-round" [routerLink]="['/consulta']">NOVA CONSULTA</button>
+      </div>
+    </div>
+
+    <div class="col-md-12 float-left" *ngFor="let consulta of consultas">
+      <!-- <div class="col-lg-3 col-md-6 col-sm-6"> -->
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                  <div class="numbers text-left">
+                  <p class="card-category">Data Consulta</p>
+                  <div class="row">
+                    <div class="col-1 col-md-1 mt-1">
+                      <i class="font-size-6 fa fa-calendar-o"></i>
+                  </div>
+                  <div class="col-5 col-md-5 mt-3">
+                    <p class="font-size-6">10/01/2021</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Valor Pago</p>
+                  <p class="card-title">R$ 350,00
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="row">
+            <div class="stats col-9 col-md-9">
+              <i class="fa fa-user-md"></i> AUTOR/RELATOR: Gregory House
+            </div>
+            <div class="stats col-3 col-md-3 text-right">
+              <button type="submit" class="btn-detalhes btn-primary btn-round">Detalhes</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+
+
+  </div>

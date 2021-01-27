@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+}
+
+.full-height {
+  height: 600px;
+}
+
+.float-left {
+  float: left;
+}
+
+.search-results {
+  height: 50rem;
+  overflow: scroll;
+}
+
+.icon-medium {
+
+  font-size: 2em !important;
+}
+
+.btn-detalhes {
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600;
+  font-size: 0.8571em;
+}
+
+.font-size-6 {
+  font-size: 0.6em;
+}

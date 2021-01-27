@@ -1,0 +1,79 @@
+<div class="col-md-12">
+    <div class="card card-user">
+        <div class="card-header">
+            <h5 class="card-title">Pesquisar Paciente</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 pr-1">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="filtro.nome">
+                    </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input type="text" class="form-control" placeholder="CPF" [(ngModel)]="filtro.cpf">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Telefone</label>
+                        <input type="text" class="form-control" placeholder="Telefone" [(ngModel)]="filtro.telefone">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="update ml-auto mr-3">
+                    <button type="submit" class="btn btn-primary btn-round" (click)="pesquisar(filtro)">Pesquisar</button>
+                </div>
+
+                <div class="update mr-3">
+                    <button type="submit" class="btn btn-success btn-round" [routerLink]="['/paciente']">Novo Paciente</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title"> Lista de Pacientes</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th class="w-auto text-center">Nome</th>
+                            <th class="w-auto text-center">CPF</th>
+                            <th class="w-auto text-center">Email</th>
+                            <th class="w-auto text-center">Telefone</th>
+                            <th class="w-auto text-center">Detalhes</th>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let paciente of pacientes">
+                            <td class="w-auto text-center">{{ paciente.nome }}</td>
+                            <td class="w-auto text-center">{{ paciente.cpf}}</td>
+                            <td class="w-auto text-center">{{ paciente.email }}</td>
+                            <td class="w-auto text-center">{{ paciente.telefone }}</td>
+                            <td class="w-auto text-center">
+
+                            <a [routerLink]="['/paciente/detalhe/', paciente.id]">
+                              <i class="nc-icon nc-single-copy-04"></i>
+                            </a>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

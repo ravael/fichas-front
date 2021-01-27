@@ -1,0 +1,48 @@
+<div class="row">
+   <div class="col-md-12">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Relatório de Consulta</h5>
+      </div>
+      <div class="card-body">
+        <div class="row ml-1">
+          <div class="col-md-5 pr-1">
+            <div class="form-group">
+              <label>Nome</label>
+              <h3>João da Silva Santos</h3>
+            </div>
+          </div>
+          <div class="col-md-3 px-1">
+            <div class="form-group">
+              <label>Idade</label>
+              <h3>29 Anos</h3>
+            </div>
+          </div>
+          <div class="col-md-4 pl-1">
+            <div class="form-group">
+              <label>Religião</label>
+              <h3>Ateu</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <form [formGroup]="form" class="col-12 col-md-12">
+            <div class="NgxEditor__Wrapper editor-border ml-2 editor-height">
+              <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+
+              <ngx-editor [editor]="editor" formControlName="editorContent" [placeholder]="'Digite aqui...'">
+
+              </ngx-editor>
+
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <div class="update ml-auto mr-auto">
+            <button type="submit" class="btn btn-primary btn-round" (click)="salvar()">Salvar Consulta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
